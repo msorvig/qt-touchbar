@@ -98,7 +98,7 @@ static NSTouchBarItemIdentifier Button2Identifier = @"com.myapp.Button2Identifie
         QString title = "B1";
         self.touchBarItem1 = [[[NSCustomTouchBarItem alloc] initWithIdentifier:identifier] autorelease];
         self.touchBarButton1 = [[NSButton buttonWithTitle:title.toNSString() target:self
-                                          action:@selector(button2Clicked)] autorelease];
+                                          action:@selector(button1Clicked)] autorelease];
         self.touchBarItem1.view =  self.touchBarButton1;
          return self.touchBarItem1;
     } else if ([identifier isEqualToString:Button2Identifier]) {
@@ -124,7 +124,7 @@ static NSTouchBarItemIdentifier Button2Identifier = @"com.myapp.Button2Identifie
     application.delegate = self;
 }
 
-- (BOOL):(SEL)aSelector
+- (BOOL)respondsToSelector:(SEL)aSelector
 {
     // We want to forward to the qt delegate. Respond to selectors it
     // responds to in addition to selectors this instance resonds to.
