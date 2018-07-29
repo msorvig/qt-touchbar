@@ -1,0 +1,8 @@
+language: cpp
+os: osx
+matrix:
+install:
+  - brew install qt
+script:
+  - qmake qt-touchbar.pro
+  - make
