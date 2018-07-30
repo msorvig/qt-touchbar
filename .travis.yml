@@ -3,6 +3,7 @@ os: osx
 matrix:
 install:
   - brew install qt
+  - brew link qt
 script:
   - qmake qt-touchbar.pro
   - make
